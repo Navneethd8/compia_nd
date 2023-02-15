@@ -1,0 +1,76 @@
+{
+  "name": "satdecoded",
+  "bin": "app.js",
+  "version": "1.0.0",
+  "description": "a Sails application",
+  "keywords": [],
+  "dependencies": {
+    "@sailshq/connect-redis": "^3.2.1",
+    "@sailshq/lodash": "^3.10.3",
+    "@sailshq/socket.io-redis": "^5.2.0",
+    "@sendgrid/mail": "^7.7.0",
+    "build": "^0.1.4",
+    "compile-run": "^2.3.4",
+    "electron-squirrel-startup": "^1.0.0",
+    "express": "^4.17.1",
+    "grunt": "1.0.4",
+    "html2pdf.js": "^0.9.0",
+    "jsonwebtoken": "^8.5.1",
+    "jspdf": "^2.5.1",
+    "nodemailer": "^6.9.1",
+    "nodemailer-express-handlebars": "^5.0.0",
+    "nodemailer-sendgrid": "^1.0.3",
+    "nodemon": "^2.0.20",
+    "pkg": "^5.8.0",
+    "puppeteer": "^19.5.2",
+    "run": "^1.4.0",
+    "sails": "^1.5.2",
+    "sails-generate-scaffold": "^0.0.5",
+    "sails-hook-grunt": "^5.0.0",
+    "sails-hook-organics": "^2.2.0",
+    "sails-hook-orm": "^4.0.0",
+    "sails-hook-sockets": "^2.0.0",
+    "sails-postgresql": "^5.0.0",
+    "sails-scaffolding": "^0.1.0",
+    "sequelize-cli": "^6.5.1",
+    "underscore": "^1.13.4",
+    "waterline": "^0.15.0",
+    "wkhtmltopdf": "^0.4.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.4",
+    "@electron-forge/maker-deb": "^6.0.4",
+    "@electron-forge/maker-rpm": "^6.0.4",
+    "@electron-forge/maker-squirrel": "^6.0.4",
+    "@electron-forge/maker-zip": "^6.0.4",
+    "electron": "^22.0.2",
+    "eslint": "5.16.0"
+  },
+  "scripts": {
+    "start": "electron-forge start",
+    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+    "lint": "./node_modules/eslint/bin/eslint.js . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+    "custom-tests": "echo \"(No other custom tests yet.)\" && echo",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "pkg": {
+    "assets": [
+      "views/**/*"
+    ],
+    "output": "dist"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/satdecoded.git"
+  },
+  "author": "Navneeth Dhamotharan",
+  "license": "ISC",
+  "engines": {
+    "node": "^16.16"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
