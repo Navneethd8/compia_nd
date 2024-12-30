@@ -1,7 +1,8 @@
 {
   "generators": {
     "modules": {
-      "scaffold": "sails-generate-scaffold"
+      "scaffold": "sails-generate-scaffold",
+      "scaffolding": "sails-scaffolding"
     }
   },
   "_generatedWith": {
